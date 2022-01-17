@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang=ru>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <script src="js/include-html.min.js"></script>
+</head>
+<body style="background-color:#8C861C;">
+  <div data-include="header.html"></div>
+
+    <section id="about_section">
+      
+        <main class="flex-center about">
+          <div class="about" style="max-width: 800px;">
+            <h1>Свяжитесь со мной</h1>
+
+     
+      
+              <form id="form1" class="mainform" action="https://formspree.io/f/form1" method="POST">
+                <label for="name">Имя</label>
+                <input type="text" id="name" name="Имя" value="" placeholder="Ваше имя.." required>
+
+                <label for="from">Почта</label>
+                <input type="text" id="from" name="Адрес" value="" placeholder="Адрес Вашей электронной почты.." required>
+
+                <label for=subject">Тема</label>
+                <input type="text" id="subject" name="" value="" placeholder="Тема Вашего письма..">
+
+                <label for="message">Сообщение</label>
+                <textarea id="message" name="" placeholder="Текст Вашего письма.."style="height:100px"></textarea>
+
+                <input type="submit" value="Отправить">
+              </form>
+
+          </div>
+        </main>
+
+
+        
+          <main class="flex-center about">
+            <div class="about">
+              <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="button">Связаться</a>
+            </div>
+
+
+        </section>
+</body>
+</html>

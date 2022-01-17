@@ -1,0 +1,149 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #333;
+  }
+  
+  .topnav {
+    overflow: hidden;
+    background-color: #333;
+  
+    display: flex;
+    list-style:none;
+    justify-content: center;
+    flex-wrap: wrap;
+    align-items: center;
+    border-bottom: solid 1px white;
+  }
+  
+  .topnav a {
+    float: left;
+    display: inline-block;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+  
+  .topnav a:hover {
+    cursor: pointer;
+    background-color: #9E2324;
+    color: black;
+  }
+  
+  .topnav a.active {
+    background-color:  #9E2324;
+    color: white;
+  }
+  
+  .topnav .icon {
+    display: none;
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav a:not(:first-child) {display: none;}
+    .topnav a.icon {
+      float: right;
+      display: block;
+    }
+  }
+  
+  @media screen and (max-width: 600px) {
+    .topnav.responsive {position: relative;}
+    .topnav.responsive .icon {
+      position: absolute;
+      right: 0;
+      top: 0;
+    }
+    .topnav.responsive a {
+      float: none;
+      display: block;
+      text-align: left;
+    }
+  }
+  
+  main {
+    background: #333;
+    margin: 60px 0;
+    padding: 10px;
+  }
+ 
+  .about {
+    background-color: #8C861C;
+  }
+
+  main div {
+    background: black;
+    color: white;
+    padding: 15px;
+    max-width: 249.15px;
+    margin: 2 5px;
+  }
+ 
+  .flex-center {
+    display: flex;
+    justify-content: center;
+  }
+
+
+  h1 {
+    font-style: italic;
+    font-size: 40px;
+    font-weight: 400;
+    text-align: center;
+    line-height: 1.35em;
+  }
+
+  main div p {
+    margin-block: 0;
+  }
+
+  .button {
+      color: white;
+      border: 1px solid white;
+      padding: 6px 20px;
+      text-decoration: none;
+  }
+
+  .button:hover {
+      color: #333;
+    background-color: white;
+  }
+
+
+
+    input[type=text], textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid #333;
+      border-radius: 4px;
+      box-sizing: border-box;
+      margin-top: 6px;
+      margin-bottom: 16px;
+      resize: vertical;
+    }
+    ​
+    input[type=submit] {
+      background-color: #04AA6D;
+      color: white;
+      padding: 12px 20px;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    ​
+    input[type=submit]:hover {
+      background-color: #45a049;
+    }
+    ​
+    .container {
+      border-radius: 5px;
+      background-color: #f2f2f2;
+      padding: 20px;
+    }
+  
+    button{font-size:16px;margin:20px 10px;}
+
+
+
