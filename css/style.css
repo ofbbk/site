@@ -86,8 +86,18 @@ body {
     justify-content: center;
   }
 
+  @font-face {
+    font-family: "Playfair Display";
+    font-style: italic;
+    font-weight: 400;
+    /* Браузер сначала попробует найти шрифт локально */
+    src: local("Playfair Display"),
+         /* Если не получилось, загрузит woff2 */
+         url("/fonts/Playfair Display") format("Playfair Display"),
+  }
 
   h1 {
+    font-family: Playfair Display;
     font-style: italic;
     font-size: 40px;
     font-weight: 400;
