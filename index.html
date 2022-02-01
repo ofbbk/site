@@ -1,14 +1,15 @@
 <!DOCTYPE html>
-<html lang=ru>
 <head>
-    <meta charset="utf-8">
+   <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/include-html.min.js"></script>
-</head>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+  </head>
 <body>
-  <div data-include="header.html"></div>
 
-    <section id="yura_section">
+  <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+  <title>Юра Кузнецов</title>
+
+      <section id="yura_section">
       
         <main class="flex-center">
           <div>
@@ -40,6 +41,19 @@
             </div>
           </main>
 
+
         </section>
+
+  <script>
+   function makeActive(Element) {
+      var elements = document.getElementsByClassName('active');
+      for (let elem of elements) {
+        elem.classList.remove('active');
+      }
+      Element.className = 'active'
+      return false;
+  }
+  </script>
+      
 </body>
 </html>

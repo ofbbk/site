@@ -3,11 +3,12 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/include-html.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 
 </head>
 <body style="background-color:#8C861C;">
-  <div data-include="header.html"></div>
+  <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+  <title>Юра Кузнецов.Обо мне</title>
 
   <section id="about_section">
       
@@ -25,5 +26,16 @@
           </main>
 
         </section>
-</body>
+        <script>
+          function makeActive(Element) {
+              var elements = document.getElementsByClassName('active');
+              for (let elem of elements) {
+                elem.classList.remove('active');
+              }
+              Element.className = 'active'
+              return false;
+          }
+          </script>
+               
+        </body>
 </html>

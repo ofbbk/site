@@ -1,19 +1,16 @@
 <!DOCTYPE html>
 <html lang=ru>
 <head>
-
-
-  
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-    <script src="js/include-html.min.js"></script>
 </head>
+
 <body>
-  <div data-include="header.html"></div>
+  <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+<title>Юра Кузнецов.Видео</title>
 
     <section id="video_section">
-
       <main class="flex-center">
         <div style="max-width: 500px;">
           <p></p>
@@ -27,9 +24,19 @@
 
       <main class="flex-center">
           <iframe width="560" height="315" src="https://www.youtube.com/embed/videoseries?list=PLUl8BQZrBudOaEtQL3KvqJBTVGj38AENQ" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-      </main>
-
+          </main>
 
         </section>
+<script>
+  function makeActive(Element) {
+      var elements = document.getElementsByClassName('active');
+      for (let elem of elements) {
+        elem.classList.remove('active');
+      }
+      Element.className = 'active'
+      return false;
+  }
+  </script>
+       
 </body>
 </html>

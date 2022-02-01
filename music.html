@@ -3,12 +3,13 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <script src="js/include-html.min.js"></script>
+    <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
-  <div data-include="header.html"></div>
+  <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
+  <title>Юра Кузнецов.Музыка</title>
 
-    <section id="yura_section">
+    <section id="misic_section">
       
         <main class="flex-center">
           <div style="max-width: 500px;">
@@ -22,5 +23,16 @@
         </main>
         
         </section>
-</body>
+        <script>
+          function makeActive(Element) {
+              var elements = document.getElementsByClassName('active');
+              for (let elem of elements) {
+                elem.classList.remove('active');
+              }
+              Element.className = 'active'
+              return false;
+          }
+          </script>
+               
+  </body>
 </html>
