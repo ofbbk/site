@@ -1,12 +1,12 @@
 body {
     margin: 0;
     font-family: Arial, Helvetica, sans-serif;
-    background-color: #333;
-  }
+    background-color: rgb(20, 20, 20); /* #333; */
+}
   
   .topnav {
     overflow: hidden;
-    background-color: #333;
+    background-color: rgb(20, 20, 20); /* #333; */
   
     display: flex;
     list-style:none;
@@ -19,7 +19,7 @@ body {
   .topnav a {
     float: left;
     display: inline-block;
-    color: #f2f2f2;
+    color: rgb(184	195	201); /* #f2f2f2; */
     text-align: center;
     padding: 14px 16px;
     text-decoration: none;
@@ -28,13 +28,16 @@ body {
   
   .topnav a:hover {
     cursor: pointer;
-    background-color: #9E2324;
-    color: black;
+/*    background-color: #9E2324; */
+    color: #9E2324; /* white; */
+
   }
   
   .topnav a.active {
-    background-color:  #9E2324;
-    color: white;
+/*    background-color: #9E2324; */
+    color: rgb(184	195	201); /* white; */
+    text-decoration-line: underline;
+    text-underline-offset: 5px;
   }
   
   .topnav .icon {
@@ -64,18 +67,14 @@ body {
   }
   
   main {
-    background: #333;
+    background: rgb(20, 20, 20);  /* #333; */
     margin: 60px 0;
     padding: 10px;
   }
  
-  .about {
-    background-color: #8C861C;
-  }
-
   main div {
-    background: black;
-    color: white;
+    background: rgb(20, 20, 20); /* #333; */
+    color: rgb(184	195	201); /* white; */
     padding: 15px;
     max-width: 249.15px;
     margin: 2 5px;
@@ -86,23 +85,8 @@ body {
     justify-content: center;
   }
 
-  @font-face {
-    font-family: "Playfair Display";
-    font-style: italic;
-    font-weight: 400;
-    /* Браузер сначала попробует найти шрифт локально */
-    src: local("Playfair Display"),
-         /* Если не получилось, загрузит woff2 */
-         url("/fonts/Playfair Display") format("Playfair Display"),
-  }
-
-  h1 {
-    font-family: Playfair Display;
-    font-style: italic;
-    font-size: 40px;
-    font-weight: 400;
+  h3 {
     text-align: center;
-    line-height: 1.35em;
   }
 
   main div p {
@@ -110,15 +94,15 @@ body {
   }
 
   .button {
-      color: white;
+      color: rgb(184	195	201); /* white; */
       border: 1px solid white;
       padding: 6px 20px;
       text-decoration: none;
   }
 
   .button:hover {
-      color: #333;
-    background-color: white;
+      color: rgb(184	195	201); /* #333; */
+    background-color: rgb(184	195	201); /* white; */
   }
 
 
@@ -132,11 +116,39 @@ body {
       margin-top: 6px;
       margin-bottom: 16px;
       resize: vertical;
+      background-color: rgb(184	195	201);
+      resize: vertical;
     }
-    ​
+        ​
+        *::-webkit-input-placeholder {
+          color: rgb(70,70,70);
+      }
+      *:-moz-placeholder {
+          /* FF 4-18 */
+          color: rgb(70,70,70);
+          opacity: 1;
+      }
+      *::-moz-placeholder {
+          /* FF 19+ */
+          color: rgb(70,70,70);
+          opacity: 1;
+      }
+      *:-ms-input-placeholder {
+          /* IE 10+ */
+          color: rgb(70,70,70);
+      }
+      *::-ms-input-placeholder {
+          /* Microsoft Edge */
+          color: rgb(70,70,70);
+      }
+      *::placeholder {
+          /* modern browser */
+          color: rgb(70,70,70);
+      }
+
     input[type=submit] {
       background-color: #04AA6D;
-      color: white;
+      color: rgb(184	195	201); /* white; */
       padding: 12px 20px;
       border: none;
       border-radius: 4px;

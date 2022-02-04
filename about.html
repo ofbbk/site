@@ -1,44 +1,32 @@
 <!DOCTYPE html>
-<html lang=ru>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-
-</head>
-<body style="background-color:#8C861C;">
+    <script src="js/active.js"></script>
+  </head>
+<body onload = activate()>
   <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
   <title>Юра Кузнецов.Обо мне</title>
 
   <section id="about_section">
       
-        <main class="flex-center about">
-          <div class="about" style="max-width: 900px;">
-            <h1>Юра Кузнецов. Видео и музыка: все обо мне</h1>
+        <main class="flex-center">
+          <div style="max-width: 900px;">
+            <h3>Юра Кузнецов. Видео и музыка: все обо мне</h3>
             <p>Моя карьера в индустрии развлечений началась в 2000 году. Вскоре не только мне, но и окружающим, стало очевидно, что работа в этой отрасли — мое призвание. С тех пор мне не раз приходилось сотрудничать с клиентами и другими артистами над самыми разными проектами. С каждым из них мои профессиональные навыки становились лучше. Я знаю, насколько важно применять инновационные подходы в работе. Я постоянно слежу за современными тенденциями, чтобы быть в курсе всего, что происходит в творческом мире. Хотите узнать больше о моей работе? Позвоните или напишите.</p>
           </div>
         </main>
         
-          <main class="flex-center about">
-            <div class="about">
+          <main class="flex-center">
+            <div>
               <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="button">Связаться</a>
             </div>
           </main>
 
         </section>
-<script>
-  window.onload = function() {
-    let location = window.location.href;
-    var elements = document.getElementsByClassName('nav');
-    for (let elem of elements) {
-      if (elem == location) {
-        document.getElementById(elem.id).classList.add("active");
-      } else {
-        elem.classList.remove('active');
-      }
-    }
-  }
-</script>
                
 </body>
 </html>

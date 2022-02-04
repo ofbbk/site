@@ -1,11 +1,13 @@
 <!DOCTYPE html>
-<html lang=ru>
+<html lang="en">
 <head>
-    <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="css/style.css">
-</head>
-<body>
+    <script src="js/active.js"></script>
+  </head>
+<body onload = activate()>
   <iframe src="header.html" onload="this.before((this.contentDocument.body||this.contentDocument).children[0]);this.remove()"></iframe>
   <title>Юра Кузнецов.Музыка</title>
 
@@ -23,19 +25,6 @@
         </main>
         
         </section>
-  <script>
-    window.onload = function() {
-      let location = window.location.href;
-      var elements = document.getElementsByClassName('nav');
-      for (let elem of elements) {
-        if (elem == location) {
-          document.getElementById(elem.id).classList.add("active");
-        } else {
-          elem.classList.remove('active');
-        }
-      }
-    }
-  </script>
                        
   </body>
 </html>
