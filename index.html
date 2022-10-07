@@ -72,7 +72,7 @@
   </div>
 
   <div id="desktop" class="w3-container w3-center">
-    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('My_video', this)">Видео</button>
     <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Music', this)">Музыка</button>
     <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('About', this)">Обо мне</button>
     <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('Contacts', this)">Контакты</button>
@@ -80,7 +80,7 @@
   </div>
       
   <div id="mobile" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-center">
-    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('My_video', this)">Видео</button>
     <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Music', this)">Музыка</button>
     <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('About', this)">Обо мне</button>
     <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Contacts', this)">Контакты</button>
@@ -92,7 +92,7 @@
     <p>Приветствую. Я Юра Кузнецов.<br>
     Я пишу музыку и монтирую видео.<br>
     Интересно и со вкусом.</p>
-    <a href="javascript:openMenu('Video', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Монтаж видео</a>
+    <a href="javascript:openMenu('My_video', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Монтаж видео</a>
     <a href="javascript:openMenu('Music', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Создание музыки</a>
     <div class="w3-container w3-center">
       <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Написать мне</a>
@@ -147,11 +147,14 @@
                 <button class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh" type="submit" id="send">Отправить</button>
               </h5>
         </form>
+      </div>
+    </div>
+  </div>
   
   
   
-  <!-- The Video Section -->
-  <div id="Video" class="w3-container w3-center menu" style="display:none">
+  <!-- The My_video Section -->
+  <div id="My_video" class="w3-container w3-center menu" style="display:none">
     <p>Я монтирую видео. Эксперт в звуке и музыке.<br>
     Монтирую с особым вниманием к темпу, ритму, драматургии.<br>
     Эрудиция помогает вникать в самые разные темы.<br>
@@ -200,22 +203,7 @@
         x.className = x.className.replace(" w3-show", "");
       }
     </script>
-    <script src="https://smtpjs.com/v3/smtp.js">
-    </script>
-    <script>
-      function sendEmail(){
-        Email.send({
-            Host : "smtp.gmail.com",
-            Username : "y.kuznetsov@gmail.com",
-            Password : "Al0bi9nush5kA9",
-            To : 'ofb@bk.ru',
-            From : document.getElementById("email").value,
-            Subject : "New Contact from enquiry",
-            Body : "And this is the body"
-        }).then(
-          message => alert(message)
-        );
-      }
-    </script>
+
 </body>
 </html>
+
