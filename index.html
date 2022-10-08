@@ -167,7 +167,7 @@
       data_t = "Yura Kuznetsov";
 
       document.title = data_t;
-      
+
       var elements = document.getElementById('main');
       elements.innerHTML = elements.innerHTML.replace('Юра Кузнецов', 'Yura Kuznetsov');
       elements.innerHTML = elements.innerHTML.replace('Видео и музыка', 'Video and music');
@@ -176,8 +176,8 @@
                 "Music",
                 "About me",
                 "Contacts"];
-             
-      var x = document.getElementById('desktop');
+       
+        var x = document.getElementById("desktop");
 
       var index;
       for (index = 0; index < x.children.length; ++index) {
@@ -185,6 +185,16 @@
           x.children[index].innerHTML = data[index]
         }
       }
+
+      var x = document.getElementById("mobile");
+
+      var index;
+      for (index = 0; index < x.children.length; ++index) {
+        if (x.children[index].tagName == "BUTTON") {
+          x.children[index].innerHTML = data[index]
+        }
+      }
+
     }
   }
 
