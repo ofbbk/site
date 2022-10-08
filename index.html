@@ -158,6 +158,7 @@
 
     <script>
   function translMenu() {
+    // Перевод заголовка
     language = window.navigator.userLanguage || window.navigator.language;
     language = language.slice(0, 2).toLowerCase();
     language = "en"
@@ -166,11 +167,26 @@
       var elements = document.getElementById('main');
       elements.innerHTML = elements.innerHTML.replace('Юра Кузнецов', 'Yura Kuznetsov');
       elements.innerHTML = elements.innerHTML.replace('Видео и музыка', 'Video and music');
+
+      var data =["Video",
+                "Music",
+                "About me",
+                "Contacts"];
+             
+      var x = document.getElementById('desktop');
+
+      var index;
+      for (index = 0; index < x.children.length; ++index) {
+        if (x.children[index].tagName == "BUTTON") {
+          x.children[index].innerHTML = data[index]
+        }
+      }
     }
   }
 
-
+s
  function translate(my_menuName) {
+  // Перевод секций
       language = window.navigator.userLanguage || window.navigator.language;
       language = language.slice(0, 2).toLowerCase();
       language = "en"
