@@ -60,7 +60,7 @@
   </style>
 
 </head>
-<body class="w3-text-grey w3-large" style="background:#202020;" onload="openMenu('Yura', document.getElementById('main'))">
+<body class="w3-text-grey w3-large" style="background:#202020;" onload="openMenu('Yura', document.getElementById('main')); translMenu();">
 
   <!-- Navbar -->
   <div class="w3-black w3-container w3-center">
@@ -89,13 +89,13 @@
   
   <!-- The Yura Section -->
   <div id="Yura" class="w3-container w3-center menu" style="display:none">
-    <p>Приветствую. Я Юра Кузнецов.<br>
+    <p id="yura1">Приветствую. Я Юра Кузнецов.<br>
     Я пишу музыку и монтирую видео.<br>
     Интересно и со вкусом.</p>
-    <a href="javascript:openMenu('My_video', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Монтаж видео</a>
-    <a href="javascript:openMenu('Music', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Создание музыки</a>
+    <a href="javascript:openMenu('My_video', '')" class="w3-button w3-text-grey w3-round w3-mobile yura" style="margin-top:2vh">Монтаж видео</a>
+    <a href="javascript:openMenu('Music', '')" class="w3-button w3-text-grey w3-round w3-mobile yura" style="margin-top:2vh">Создание музыки</a>
     <div class="w3-container w3-center">
-      <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Написать мне</a>
+      <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile yura" style="margin-top:2vh">Написать мне</a>
     </div>
   </div>
 
@@ -114,48 +114,33 @@
               <div class="w3-row">
                 <div class="w3-col l4 s1 w3-center"><p></p></div>
                 <div class="w3-col l4 s10 w3-center">
-                  <h5>Юра Кузнецов. Видео и музыка: все обо мне</h5>
-                  <p>Моя карьера в индустрии развлечений началась в 2000 году. Вскоре не только мне, но и окружающим, стало очевидно, что работа в этой отрасли — мое призвание. С тех пор мне не раз приходилось сотрудничать с клиентами и другими артистами над самыми разными проектами. С каждым из них мои профессиональные навыки становились лучше. Я знаю, насколько важно применять инновационные подходы в работе. Я постоянно слежу за современными тенденциями, чтобы быть в курсе всего, что происходит в творческом мире. Хотите узнать больше о моей работе? Позвоните или напишите.</p>
+                  <h5 id="about1">Юра Кузнецов. Видео и музыка: все обо мне</h5>
+                  <p id="about2">Моя карьера в индустрии развлечений началась в 2000 году. Вскоре не только мне, но и окружающим, стало очевидно, что работа в этой отрасли — мое призвание. С тех пор мне не раз приходилось сотрудничать с клиентами и другими артистами над самыми разными проектами. С каждым из них мои профессиональные навыки становились лучше. Я знаю, насколько важно применять инновационные подходы в работе. Я постоянно слежу за современными тенденциями, чтобы быть в курсе всего, что происходит в творческом мире. Хотите узнать больше о моей работе? Позвоните или напишите.</p>
                 </div>
                 <div class="w3-col l4 s1 w3-center"><p></p></div>
               </div>
-        <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Написать мне</a>
+        <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile about" style="margin-top:2vh">Написать мне</a>
       </div>
 
 
       <!-- The Contacts Section -->
       <div id="Contacts" class="w3-container menu" style="display:none">
         <div class="w3-row">
-          <div class="w3-col l4 s1"><p></p></div>
-          <div class="w3-col l4 s10">
-             <h5 class="w3-center">Свяжитесь со мной</h5>
-             <!-- <form class="w3-container" onsubmit="sendEmail(); reset(); return false;"> -->
-              <form class="w3-container" action="http://formspree.io/y.kuznetsov@gmail.com" method="POST">
-                <p>
-              <label>Имя</label>
-              <input class="w3-input" type="text" id="name" placeholder="Ваше имя.." required></p>
-            <p>
-              <label>Почта</label>
-              <input class="w3-input" type="email" id="email" placeholder="Адрес Вашей электронной почты.." required></p>
-            <p>
-              <label class=label">Тема</label>
-              <input class="w3-input" type="text" id="subject" placeholder="Тема Вашего письма.."></p>
-          <p>
-              <label class=label">Сообщение</label>
-              <textarea class="w3-input" id="message" name="Body" placeholder="Текст Вашего письма.."style="height:100px"></textarea></p>
-              <h5 class="w3-center">
-                <button class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh" type="submit" id="send">Отправить</button>
-              </h5>
-        </form>
+          <div class="w3-col l4 s1"><p> </p></div>
+        <div class="w3-col l4 s10">
+          <h5 id="contacts1" class="w3-center">Свяжитесь со мной</h5>
+          <div class="w3-container w3-center">
+            <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile contacts" style="margin-top:2vh">Написать мне</a>
+          </div>
+        </div>
       </div>
-    </div>
   </div>
   
   
   
   <!-- The My_video Section -->
   <div id="My_video" class="w3-container w3-center menu" style="display:none">
-    <p>Я монтирую видео. Эксперт в звуке и музыке.<br>
+    <p id="vid1" >Я монтирую видео. Эксперт в звуке и музыке.<br>
     Монтирую с особым вниманием к темпу, ритму, драматургии.<br>
     Эрудиция помогает вникать в самые разные темы.<br>
     Делаю обстоятельно, как для себя.<br>
@@ -172,6 +157,119 @@
 
 
     <script>
+  function translMenu() {
+    language = window.navigator.userLanguage || window.navigator.language;
+    language = language.slice(0, 2).toLowerCase();
+    language = "en"
+    if (language !== 'ru') {
+      // alert("******");
+      var elements = document.getElementById('main');
+      elements.innerHTML = elements.innerHTML.replace('Юра Кузнецов', 'Yura Kuznetsov');
+      elements.innerHTML = elements.innerHTML.replace('Видео и музыка', 'Video and music');
+    }
+  }
+
+
+ function translate(my_menuName) {
+      language = window.navigator.userLanguage || window.navigator.language;
+      language = language.slice(0, 2).toLowerCase();
+      language = "en"
+      if (language !== 'ru') {
+        switch (my_menuName)
+        {
+          case "Yura":
+            var data_p = "Greetings. I am Yura Kuznetsov.<br>";
+            data_p += "I write music and edit videos.<br>";
+            data_p += "Interesting and tasteful.";
+
+            var data_a =["Video editing",
+                      "Music Creation",
+                          "Write me"];
+            var data_s = "Video editing or music writing";
+
+            var elements = document.getElementById('yura1');
+            elements.innerHTML = data_p;
+
+            var elements = document.getElementsByClassName('yura');
+            var index;
+            for (index = 0; index < elements.length; ++index) {
+                elements[index].innerHTML = data_a[index]
+                if (index == 2) {
+                    var elem = elements[index].href;
+                    elem = elem.split('=')
+                    elem[1] = data_s
+                    elements[index].href = elem.join('=')
+               }
+            }
+            break;
+
+          case "My_video":
+            var data_p = "I am editing video. Sound and music expert.<br>";
+            data_p += "I edit with attention to tempo, rhythm, dramaturgy.<br>";
+            data_p += "Erudition helps to delve into a variety of topics.<br>";
+            data_p += "I do it in detail, as for myself.<br>";
+            data_p += "The output is a capacious, tasty, exciting video.";
+
+            var elements = document.getElementById('vid1');
+            elements.innerHTML = data_p;
+            break;
+      
+
+            case "About":
+              var data_h = "Yura Kuznetsov. Video and music: all about me";
+              var data_p = ["My career in the entertainment industry began in 2000. Soon, not only to me, but also to those around me, it became obvious that working in this industry was my calling. Since then, I have collaborated with clients and other artists on a variety of projects. With each of them my professional skills became better. I know how important it is to apply innovative approaches in work. I constantly follow current trends to keep abreast of everything that happens in the creative world. Want to know more about my work? Call or write."];
+              var data_a =["Write me"];
+              var data_s = "Video editing or music writing";
+
+              var elements = document.getElementById('about1');
+              elements.innerHTML = data_h;
+
+              var elements = document.getElementById('about2');
+              elements.innerHTML = data_p;
+
+              var elements = document.getElementsByClassName('about');
+              var index;
+              for (index = 0; index < elements.length; ++index) {
+                elements[index].innerHTML = data_a[index]
+                if (index == 0) {
+                    var elem = elements[index].href;
+                    elem = elem.split('=')
+                    elem[1] = data_s
+                    elements[index].href = elem.join('=')
+                }
+              }
+              break;
+
+          case "Contacts":  
+            var data_h = "Get into contact with me";
+            var data_a =["Write me"];
+            var data_s = "Video editing or music writing";
+
+            var elements = document.getElementById('contacts1');
+              elements.innerHTML = data_h;
+
+            var elements = document.getElementsByClassName('contacts');
+            var index;
+            for (index = 0; index < elements.length; ++index) {
+              elements[index].innerHTML = data_a[index]
+              if (index == 0) {
+                  var elem = elements[index].href;
+                  elem = elem.split('=')
+                  elem[1] = data_s
+                  elements[index].href = elem.join('=')
+              }
+            }
+            break;
+
+          case "Music":
+              break;
+
+          default:
+          }
+      }
+  }
+
+
       // Переключает между десктопными мобильным режимами
       function myFunction() {
         var x = document.getElementById("mobile");
@@ -197,6 +295,7 @@
           x[i].style.display = "none";
         }
         document.getElementById(menuName).style.display = "block";
+        translate(menuName)
 
         // В мобильной версии скрывает меню после клика по пункту меню
         x = document.getElementById("mobile");
@@ -204,6 +303,6 @@
       }
     </script>
 
+
 </body>
 </html>
-
