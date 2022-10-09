@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="кг">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://www.w3schools.com/lib/w3-colors-food.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <style>
+    body, h1, h2, h3, h4, h5, h6  {
+      font-family: Roboto, sans-serif;
+    }
+
+    #desktop, #mobile {
+      background: #28c035;
+    }
+
+    #main {
+      color:darkgray!important;
+      background: black!important;
+    }
+
+    #main:hover{
+      color:white!important;
+      background: black!important;
+    }
+
+    button.w3-bar-item.w3-hide-small:hover{
+      color: black!important;
+      background: #28c035!important;
+    }
+
+    .active {
+      color: black!important;
+      /* text-decoration: underline; */
+      border: 2px dotted !important;
+    }
+
+    #mobile > .w3-bar-item.active {
+      color: white !important;
+      background: black !important;
+    }
+
+    .menu {
+      margin-top: 10vh;
+    }
+
+    .w3-round:hover {
+      color: white !important;
+      background:#202020 !important;
+    }
+  </style>
+
+</head>
+<body class="w3-text-grey w3-large" style="background:#202020;" onload="openMenu('Yura', document.getElementById('main'))">
+
+  <!-- Navbar -->
+  <div class="w3-black w3-container w3-center">
+    <button id="main" class="w3-bar-item w3-button" onclick="openMenu('Yura',this)">
+      Юра Кузнецов
+      <img src="images/yura.jpg" alt="Юра" class="w3-circle  w3-center" style="width:10%">
+      Видео и музыка
+    </button>
+  </div>
+
+  <div id="desktop" class="w3-container w3-center">
+    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Music', this)">Музыка</button>
+    <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('About', this)">Обо мне</button>
+    <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('Contacts', this)">Контакты</button>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-center w3-hide-large w3-hide-medium w3-text-black" onclick="myFunction()">&#9776;</a>
+  </div>
+      
+  <div id="mobile" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-center">
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Music', this)">Музыка</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('About', this)">Обо мне</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Contacts', this)">Контакты</button>
+  </div>
+
+  
+  <!-- The Yura Section -->
+  <title>Юра Кузнецов</title>
+  <div id="Yura" class="w3-container w3-center menu" style="display:none">
+    <p>Приветствую. Я Юра Кузнецов.<br>
+      Я пишу музыку и монтирую видео.<br>
+      Интересно и со вкусом.</p>
+    </div>
+
+  <!-- The Video Section -->
+  <div id="Video" class="w3-container menu" style="display:none">
+    <h2>Видео</h2>
+    <p>Все про Видео.</p>
+  </div>
+
+    <!-- The Music Section -->
+    <div id="Music" class="w3-container menu" style="display:none">
+      <h2>Музыка</h2>
+      <p>Все о музыке.</p> 
+    </div>
+
+    <!-- The About Section -->
+    <div id="About" class="w3-container menu" style="display:none">
+      <h2>Обо мне</h2>
+      <p>Все обо мне.</p> 
+    </div>
+
+    <!-- The Contacts Section -->
+    <div id="Contacts" class="w3-container menu" style="display:none">
+      <h2>Контакты</h2>
+      <p>Все о контактах.</p> 
+    </div>
+
+
+    <script>
+      function myFunction() {
+        var x = document.getElementById("mobile");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function openMenu(menuName, punct) {
+        // 
+        var x = document.getElementsByClassName("w3-bar-item");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        punct.className += " active";
+
+        // 
+        var i;
+        var x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(menuName).style.display = "block";
+
+        // 
+        x = document.getElementById("mobile");
+        x.className = x.className.replace(" w3-show", "");
+      }
+    </script>
+</body>
+</html>

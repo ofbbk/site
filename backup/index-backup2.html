@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="кг">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+    <style>
+        body, h1, h2, h3, h4, h5, h6  {
+          font-family: Verdana, Geneva, sans-serif;
+        }
+        </style>
+    <title>Юра Кузнецов</title>
+</head>
+<body class="w3-text-grey" style="background:#202020;" onload="openMenu('Yura')">
+
+    <!-- Navbar -->
+    <div class="w3-black w3-container w3-center">
+        <button class="w3-bar-item w3-button" onclick="openMenu('Yura')">Юра Кузнецов</button>
+
+    </div>
+    <div class="w3-lime  w3-container w3-center">
+        <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Video')">Видео</button>
+        <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Music')">Музыка</button>
+        <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('About')">Обо мне</button>
+        <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('Contacts')">Контакты</button>
+        <a href="javascript:void(0)" class="w3-bar-item w3-button w3-center w3-hide-large w3-hide-medium" onclick="myFunction()">&#9776;</a>
+    </div>
+      
+    <div id="mobile" class="w3-bar-block w3-lime w3-hide w3-hide-large w3-hide-medium w3-center" >
+        <button class="w3-bar-item w3-button" onclick="openMenu('Video')">Видео</button>
+        <button class="w3-bar-item w3-button" onclick="openMenu('Music')">Музыка</button>
+        <button class="w3-bar-item w3-button" onclick="openMenu('About')">Обо мне</button>
+        <button class="w3-bar-item w3-button" onclick="openMenu('Contacts')">Контакты</button>
+
+    </div>
+      
+    
+    <!-- The Yura Section -->
+    <div id="Yura" class="w3-container w3-border menu" style="display:none">
+        <h2>Юра Кузнецов</h2>
+
+      </div>
+    </div>
+
+    <!-- The Video Section -->
+    <div id="Video" class="w3-container w3-border menu" style="display:none">
+        <h2>Видео</h2>
+        <p>Все про Видео.</p>
+      </div>
+    </div>
+
+      <!-- The Music Section -->
+      <div id="Music" class="w3-container menu" style="display:none">
+        <h2>Музыка</h2>
+        <p>Все о музыке.</p> 
+      </div>
+
+      <!-- The About Section -->
+      <div id="About" class="w3-container menu" style="display:none">
+        <h2>Обо мне</h2>
+        <p>Все обо мне.</p> 
+      </div>
+
+      <!-- The Contacts Section -->
+      <div id="Contacts" class="w3-container menu" style="display:none">
+        <h2>Контакты</h2>
+        <p>Все о контактах.</p> 
+      </div>
+
+
+    <script>
+        function myFunction() {
+            var x = document.getElementById("mobile");
+            if (x.className.indexOf("w3-show") == -1) {
+                x.className += " w3-show";
+            } else { 
+                x.className = x.className.replace(" w3-show", "");
+            }
+        }
+
+
+    function openMenu(menuName) {
+  var i;
+  
+  var x = document.getElementsByClassName("menu");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";
+    
+  }
+  document.getElementById(menuName).style.display = "block";  
+}
+</script>
+  
+</body>
+</html>

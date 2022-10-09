@@ -1,0 +1,220 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
+  <title>Юра Кузнецов</title>
+  <style>
+    body, h1, h2, h3, h4, h5, h6  {
+      font-family: Roboto, sans-serif;
+    }
+
+    #desktop, #mobile {
+      background: #28c035;
+    }
+
+    #main {
+      color:darkgray!important;
+      background: black!important;
+    }
+
+    #main:hover{
+      color:white!important;
+      background: black!important;
+    }
+
+    button.w3-bar-item.w3-hide-small:hover{
+      color: black!important;
+      background: #28c035!important;
+    }
+
+    .active {
+      color: black!important;
+      /* text-decoration: underline; */
+      border: 2px dotted !important;
+    }
+
+    #mobile > .w3-bar-item.active {
+      color: white !important;
+      background: black !important;
+    }
+
+    .menu {
+      margin-top: 10vh;
+    }
+
+    iframe {
+      margin-top: 4vh;
+      margin-bottom: -1.5vh;
+      margin-left: 0.5vw;
+      margin-right: 0.5vw;
+    }
+
+    .w3-round:hover {
+      color: white !important;
+      background:#202020 !important;
+    }
+  </style>
+
+</head>
+<body class="w3-text-grey w3-large" style="background:#202020;" onload="openMenu('Yura', document.getElementById('main'))">
+
+  <!-- Navbar -->
+  <div class="w3-black w3-container w3-center">
+    <button id="main" class="w3-bar-item w3-button" onclick="openMenu('Yura',this)">
+      Юра Кузнецов
+      <img src="images/yura.jpg" alt="Юра" class="w3-circle  w3-center" style="width:10%">
+      Видео и музыка
+    </button>
+  </div>
+
+  <div id="desktop" class="w3-container w3-center">
+    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-hide-small" onclick="openMenu('Music', this)">Музыка</button>
+    <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('About', this)">Обо мне</button>
+    <button class="w3-bar-item w3-button w3-hide-small"  onclick="openMenu('Contacts', this)">Контакты</button>
+    <a href="javascript:void(0)" class="w3-bar-item w3-button w3-center w3-hide-large w3-hide-medium w3-text-black" onclick="myFunction()">&#9776;</a>
+  </div>
+      
+  <div id="mobile" class="w3-bar-block w3-hide w3-hide-large w3-hide-medium w3-center">
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Video', this)">Видео</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Music', this)">Музыка</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('About', this)">Обо мне</button>
+    <button class="w3-bar-item w3-button w3-text-black w3-text-hover-white w3-hover-black" onclick="openMenu('Contacts', this)">Контакты</button>
+  </div>
+  
+  
+  <!-- The Yura Section -->
+  <div id="Yura" class="w3-container w3-center menu" style="display:none">
+    <p>Приветствую. Я Юра Кузнецов.<br>
+    Я пишу музыку и монтирую видео.<br>
+    Интересно и со вкусом.</p>
+    <a href="javascript:openMenu('Video', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Монтаж видео</a>
+    <a href="javascript:openMenu('Music', '')" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Создание музыки</a>
+    <div class="w3-container w3-center">
+      <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Написать мне</a>
+    </div>
+  </div>
+
+
+    <!-- The Music Section -->
+    <div id="Music" class="w3-container w3-center menu" style="display:none">
+      <div class="w3-row">
+        <iframe width="400vw" height="500vh" scrolling="yes" frameborder="no" src="https://w.soundcloud.com/player/?url=https%3A//api.soundcloud.com/playlists/1363196485"></iframe>
+      </div>
+    </div>
+
+    
+      <!-- The About Section -->
+      <div id="About" class="w3-container w3-center menu" style="display:none;">
+            <!-- <div style="margin-inline-start: 25%;margin-inline-end: 25%;"> -->
+              <div class="w3-row">
+                <div class="w3-col l4 s1 w3-center"><p></p></div>
+                <div class="w3-col l4 s10 w3-center">
+                  <h5>Юра Кузнецов. Видео и музыка: все обо мне</h5>
+                  <p>Моя карьера в индустрии развлечений началась в 2000 году. Вскоре не только мне, но и окружающим, стало очевидно, что работа в этой отрасли — мое призвание. С тех пор мне не раз приходилось сотрудничать с клиентами и другими артистами над самыми разными проектами. С каждым из них мои профессиональные навыки становились лучше. Я знаю, насколько важно применять инновационные подходы в работе. Я постоянно слежу за современными тенденциями, чтобы быть в курсе всего, что происходит в творческом мире. Хотите узнать больше о моей работе? Позвоните или напишите.</p>
+                </div>
+                <div class="w3-col l4 s1 w3-center"><p></p></div>
+              </div>
+        <a href="mailto:y.kuz@icloud.com?subject=Видеомонтаж или написание музыки" class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh">Написать мне</a>
+      </div>
+
+
+      <!-- The Contacts Section -->
+      <div id="Contacts" class="w3-container menu" style="display:none">
+        <div class="w3-row">
+          <div class="w3-col l4 s1"><p></p></div>
+          <div class="w3-col l4 s10">
+             <h5 class="w3-center">Свяжитесь со мной</h5>
+             <form class="w3-container">
+            <p>
+              <label>Имя</label>
+              <input class="w3-input" type="text" id="name" placeholder="Ваше имя.." required></p>
+            <p>
+              <label>Почта</label>
+              <input class="w3-input" type="email" id="from" placeholder="Адрес Вашей электронной почты.." required></p>
+            <p>
+              <label class=label">Тема</label>
+              <input class="w3-input" type="text" id="subject" placeholder="Тема Вашего письма.."></p>
+          <p>
+              <label class=label">Сообщение</label>
+              <textarea class="w3-input" id="message" name="Body" placeholder="Текст Вашего письма.."style="height:100px"></textarea></p>
+              <h5 class="w3-center">
+                <button class="w3-button w3-text-grey w3-round w3-mobile" style="margin-top:2vh" type="submit" id="send">Отправить</button>
+              </h5>
+        </form>    <
+  
+  
+  
+  <!-- The Video Section -->
+  <div id="Video" class="w3-container w3-center menu" style="display:none">
+    <p>Я монтирую видео. Эксперт в звуке и музыке.<br>
+    Монтирую с особым вниманием к темпу, ритму, драматургии.<br>
+    Эрудиция помогает вникать в самые разные темы.<br>
+    Делаю обстоятельно, как для себя.<br>
+    На выходе — ёмкий, вкусный, захватывающий ролик.</p>
+    <div class="w3-row">
+      <iframe src="https://www.youtube.com/embed/M59nKilFXsM" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/rUDfANCoa_s" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    </div>
+    <div class="w3-row">
+      <iframe src="https://www.youtube.com/embed/TG-Q2p-Bz1E" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+      <iframe src="https://www.youtube.com/embed/y4wmdMNftSw" title="YouTube video player" frameborder="0" allowfullscreen></iframe>
+    <div>
+  </div>
+
+
+    <script>
+      // Переключает между десктопными мобильным режимами
+      function myFunction() {
+        var x = document.getElementById("mobile");
+        if (x.className.indexOf("w3-show") == -1) {
+          x.className += " w3-show";
+        } else { 
+          x.className = x.className.replace(" w3-show", "");
+        }
+      }
+
+      function openMenu(menuName, punct) {
+        // Выбирает объет для отображение после клика по пункту меню
+        var x = document.getElementsByClassName("w3-bar-item");
+        for (i = 0; i < x.length; i++) {
+          x[i].className = x[i].className.replace(" active", "");
+        }
+        punct.className += " active";
+
+        // 
+        var i;
+        var x = document.getElementsByClassName("menu");
+        for (i = 0; i < x.length; i++) {
+          x[i].style.display = "none";
+        }
+        document.getElementById(menuName).style.display = "block";
+
+        // В мобильной версии скрывает меню после клика по пункту меню
+        x = document.getElementById("mobile");
+        x.className = x.className.replace(" w3-show", "");
+      }
+    </script>
+    <script src="https://smtpjs.com/v3/smtp.js">
+    </script>
+    <script>
+      function sendEmail(){
+        Email.send({
+            Host : "smtp.yourisp.com",
+            Username : "username",
+            Password : "password",
+            To : 'them@website.com',
+            From : "you@isp.com",
+            Subject : "This is the subject",
+            Body : "And this is the body"
+        }).then(
+          message => alert(message)
+        );
+      }
+    </script>
+</body>
+</html>
