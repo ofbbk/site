@@ -8,7 +8,7 @@
 
   <!-- FavIcon special for github Pages -->
 <link rel="shortcut icon" type="image/x-icon" href="favicon.ico?">
-<!-- <link rel="shortcut icon" type="image/png" href="favicon-16x16.png"> -->
+<link rel="shortcut icon" type="image/png" href="favicon-16x16.png?">
 
  <!-- FavIcons  -->
 <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
@@ -179,6 +179,8 @@
     language = language.slice(0, 2).toLowerCase();
     // language = "en"
     if (language !== 'ru') {
+
+      document.documentElement.setAttribute("lang", language);
 
       data_t = "Yura Kuznetsov";
 
